@@ -1,0 +1,23 @@
+{
+  "name": "Murmur3",
+  "version": "0.0.1",
+  "author": "Zachary Marcantel <zmarcantel@gmail.com>",
+  "description": "Murmur3 Hashing functions for NodeJS",
+  "contributors": [ 
+    {
+      "name": "Zachary Marcantel",
+      "email": "zmarcantel@gmail.com"
+    } 
+  ],
+  "main": "./murmur3.js",
+  "dependencies" : {
+  },
+  "devDependencies": {
+    "mocha"     :  ">0",
+    "should"    :  ">0"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">0"
+  }
+}
