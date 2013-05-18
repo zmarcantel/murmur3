@@ -1,5 +1,5 @@
 {
-  "name": "murmur3",
+  "name": "murmur",
   "version": "0.0.1",
   "author": "Zachary Marcantel <zmarcantel@gmail.com>",
   "description": "Murmur3 Hashing functions for NodeJS",
