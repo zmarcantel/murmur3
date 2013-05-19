@@ -26,18 +26,24 @@ The functions include:
 Hash Usage
 ===============
 
+  * `.hash128(string)` :: Hash the given string. Returns the `murmur` object.
+  * `.raw()` :: Return the array of four "32 bit unsigned integers"
+  * `.hex()` :: Return a 16 character/byte, string, hex representation
+
+Alternatively, the raw array may be accessed with `murmur.hash_raw`.
+
     var murmur = require('murmur3');
 
     // NOTE: currently only 128 bit length is implemented
 
-    // remember, array of 4 "32 bit unsigned integers"
-    var hash = murmur.hash128('string of text or data');
+    // array of 4 "32 bit unsigned integers"
+    var hash = murmur.hash128('string of text or data').raw();
 
     // or with a seed (limited to 32 bit address space)
-    var seeded = murmur.hash128('string of text or data', 0xFFFFFFFF)
+    var seeded = murmur.hash128('string of text or data', 0xFFFFFFFF);
 
     // returns 16 character hex representation as a string
-    var string_hex = murmur.hex(hash);
+    var string_hex = murmur.hash128('will be 16byte hex').hex();
 
 
 Testing

@@ -245,12 +245,21 @@
     h2 = murmur3.add64(h2, h1);
 
 
-    return [h1[1] >>> 0, h1[0] >>> 0, h2[1] >>> 0, h2[0] >>> 0];
+    murmur3.hash_raw = [h1[1] >>> 0, h1[0] >>> 0, h2[1] >>> 0, h2[0] >>> 0];
+    return murmur3;
   };
 
-  murmur3.hex = function(hash)
+  murmur3.raw = function()
   {
-    return hash[0].toString(16) + '' + hash[1].toString(16) + '' + hash[2].toString(16) + '' + hash[3].toString(16);
+    return murmur3.hash_raw;
+  }
+
+  murmur3.hex = function()
+  {
+    return murmur3.hash_raw[0].toString(16) + '' + 
+           murmur3.hash_raw[1].toString(16) + '' + 
+           murmur3.hash_raw[2].toString(16) + '' + 
+           murmur3.hash_raw[3].toString(16);
   }
 
   module.exports = murmur3;
