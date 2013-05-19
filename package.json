@@ -1,6 +1,6 @@
 {
   "name": "murmur",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Zachary Marcantel <zmarcantel@gmail.com>",
   "description": "Murmur3 Hashing functions for NodeJS",
   "contributors": [ 
